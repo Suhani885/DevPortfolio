@@ -42,8 +42,6 @@ const HeroSection = ({ isVisible }) => (
             <span>•</span>
             <span>React.js</span>
             <span>•</span>
-            <span>TypeScript</span>
-            <span>•</span>
             <span>Angular.js</span>
           </div>
         </div>

@@ -27,19 +27,19 @@ const Projects = ({ isVisible }) => {
       year: "2024",
       team: "Team of 2",
     },
-    // {
-    //   title: "Portfolio Website",
-    //   description:
-    //     "Modern, responsive portfolio website with smooth animations, interactive components, and optimized performance. Built with React and Tailwind CSS.",
-    //   tech: ["React", "Tailwind", "Framer Motion", "Vercel"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    //   github: "#",
-    //   live: "#",
-    //   featured: false,
-    //   year: "",
-    //   team: "",
-    // },
+    {
+      title: "Certificate Generator",
+      description:
+        "Modern, responsive portfolio website with smooth animations, interactive components, and optimized performance. Built with React and Tailwind CSS.",
+      tech: ["React", "Tailwind", "Django", "MySQL"],
+      image:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      github: "https://github.com/Suhani885/AutoCertify",
+      live: "#",
+      featured: false,
+      year: "",
+      team: "Team of 2",
+    },
     {
       title: "Weather Dashboard",
       description:

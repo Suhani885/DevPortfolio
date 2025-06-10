@@ -77,11 +77,11 @@ const About = ({ isVisible }) => {
 
                   <div className="flex items-center space-x-6 pt-4 text-amber-200/60">
                     <div className="flex items-center space-x-2">
-                      <Coffee className="w-4 h-4" />
+                      <Coffee className="md:w-4 md:h-4 w-6 h-6" />
                       <span className="text-sm">Collaborative spirit</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Heart className="w-4 h-4" />
+                      <Heart className="md:w-4 md:h-4 w-6 h-6" />
                       <span className="text-sm">Design Enthusiast</span>
                     </div>
                   </div>
@@ -91,14 +91,14 @@ const About = ({ isVisible }) => {
                   {achievements.map((achievement, index) => (
                     <div
                       key={index}
-                      className="bg-white/5  rounded-xl p-6 border border-white/10 text-center hover:bg-gradient-to-b hover:from-amber-500/10 hover:to-rose-500/10 hover:border-amber-300/30 transition-all duration-700 group/card transform hover:scale-105"
+                      className="bg-white/5 rounded-xl p-6 border border-white/10 text-center hover:bg-gradient-to-b hover:from-amber-500/10 hover:to-rose-500/10 hover:border-amber-300/30 transition-all duration-700 group/card transform hover:scale-105"
                       style={{ transitionDelay: `${index * 100}ms` }}
                     >
                       <div className="relative">
                         <achievement.icon className="w-8 h-8 text-amber-300 mb-3 mx-auto group-hover/card:text-amber-200 transition-all duration-500 group-hover/card:scale-110" />
                         <div className="absolute inset-0 bg-gradient-to-r from-amber-300/20 to-rose-300/20 rounded-full blur opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                       </div>
-                      <div className="text-lg font-light text-amber-100 mb-2">
+                      <div className="text-sm md:text-lg font-light text-amber-100 mb-2">
                         {achievement.label}
                       </div>
                       <div className="text-xs text-amber-100/60 font-light tracking-wide leading-relaxed">
@@ -113,7 +113,7 @@ const About = ({ isVisible }) => {
             <div className="text-center">
               <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=suhaniss885@gmail.com&subject=Let's%20Work%20Together%20-%20New%20Project%20Inquiry&body=Hi%20Suhani,%0D%0A%0D%0AI%20hope%20this%20email%20finds%20you%20well.%0D%0A%0D%0AI%20have%20a%20project%20in%20mind%20and%20would%20appreciate%20the%20opportunity%20to%20discuss%20this%20further.%0D%0A%0AThank%20you%20for%20your%20time%20and%20I%20look%20forward%20to%20hearing%20from%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]">
                 <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/10 to-rose-400/10 border border-amber-300/20 rounded-full text-amber-200/80 text-sm font-light tracking-wide backdrop-blur-sm">
-                  <Award className="w-4 h-4" />
+                  <Award className="w-6 h-6 md:w-4 md:h-4" />
                   <span>Let's create something amazing together</span>
                 </div>
               </a>
