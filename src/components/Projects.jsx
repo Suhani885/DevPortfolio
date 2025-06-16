@@ -2,19 +2,19 @@ import { Github, ExternalLink, Calendar, Users } from "lucide-react";
 
 const Projects = ({ isVisible }) => {
   const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Modern e-commerce solution with React, TypeScript, and advanced state management. Features real-time inventory, payment integration, and admin dashboard with comprehensive analytics.",
-      tech: ["React", "TypeScript", "Tailwind", "Redux"],
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      github: "#",
-      live: "#",
-      featured: true,
-      year: "2025",
-      team: "Solo Project",
-    },
+    // {
+    //   title: "E-Commerce Platform",
+    //   description:
+    //     "Modern e-commerce solution with React, TypeScript, and advanced state management. Features real-time inventory, payment integration, and admin dashboard with comprehensive analytics.",
+    //   tech: ["React", "TypeScript", "Tailwind", "Redux"],
+    //   image:
+    //     "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    //   github: "#",
+    //   live: "#",
+    //   featured: true,
+    //   year: "2025",
+    //   team: "Solo Project",
+    // },
     {
       title: "Hospital Management System",
       description:
@@ -30,13 +30,13 @@ const Projects = ({ isVisible }) => {
     {
       title: "Certificate Generator",
       description:
-        "Modern, responsive portfolio website with smooth animations, interactive components, and optimized performance. Built with React and Tailwind CSS.",
-      tech: ["React", "Tailwind", "Django", "MySQL"],
+        "Modern, responsive certificate generation tool with drag-and-drop field placement and real-time preview.",
+      tech: ["React.js", "TailwindCSS", "Django", "MySQL"],
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       github: "https://github.com/Suhani885/AutoCertify",
       live: "#",
-      featured: false,
+      featured: true,
       year: "",
       team: "Team of 2",
     },
@@ -117,7 +117,7 @@ const Projects = ({ isVisible }) => {
                   </div>
 
                   <div className="p-8">
-                    <div className="flex items-center justify-between mb-4">
+                    {/* <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-4 text-xs text-amber-200/60">
                         <div className="flex items-center space-x-1">
                           <Calendar className="w-3 h-3" />
@@ -128,7 +128,7 @@ const Projects = ({ isVisible }) => {
                           <span>{project.team}</span>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     <h3 className="text-2xl font-light mb-4 group-hover:text-amber-200 transition-colors tracking-wide text-amber-100">
                       {project.title}
@@ -168,7 +168,7 @@ const Projects = ({ isVisible }) => {
           </div>
 
           {/* Other Projects */}
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-light text-center mb-12 text-amber-100">
               <span className="bg-gradient-to-r from-amber-200/80 to-rose-200/80 bg-clip-text text-transparent">
                 More Projects
@@ -232,7 +232,7 @@ const Projects = ({ isVisible }) => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="text-center mt-16">
             <a href="https://github.com/Suhani885?tab=repositories">
