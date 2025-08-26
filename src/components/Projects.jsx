@@ -2,6 +2,24 @@ import { Github, ExternalLink, Calendar, Users } from "lucide-react";
 
 const Projects = ({ isVisible }) => {
   const projects = [
+    {
+      title: "Student Portal",
+      description:
+        "High-performance Student Portal serving 8,000+ daily users at KIET Group Of Institutions. Features attendance tracking, class schedules, fee payment system, and PWA capabilities with offline support.",
+      tech: [
+        "React.js",
+        "Material UI",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "ApexCharts",
+      ],
+      image: "/studentPortal.jpeg",
+      github: "#",
+      live: "https://tech.kiet.edu/StudentPortal/",
+      featured: true,
+      year: "2024",
+      team: "Team Project",
+    },
     // {
     //   title: "E-Commerce Platform",
     //   description:
@@ -27,19 +45,19 @@ const Projects = ({ isVisible }) => {
       year: "2024",
       team: "Team of 2",
     },
-    {
-      title: "Certificate Generator",
-      description:
-        "Modern, responsive certificate generation tool with drag-and-drop field placement and real-time preview.",
-      tech: ["React.js", "TailwindCSS", "Django", "MySQL"],
-      image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      github: "https://github.com/Suhani885/AutoCertify",
-      live: "#",
-      featured: true,
-      year: "",
-      team: "Team of 2",
-    },
+    // {
+    //   title: "Certificate Generator",
+    //   description:
+    //     "Modern, responsive certificate generation tool with drag-and-drop field placement and real-time preview.",
+    //   tech: ["React.js", "TailwindCSS", "Django", "MySQL"],
+    //   image:
+    //     "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+    //   github: "https://github.com/Suhani885/AutoCertify",
+    //   live: "#",
+    //   featured: true,
+    //   year: "",
+    //   team: "Team of 2",
+    // },
     {
       title: "Weather Dashboard",
       description:
@@ -146,13 +164,13 @@ const Projects = ({ isVisible }) => {
                     </div>
 
                     <div className="flex space-x-6">
-                      <a
+                      {/* <a
                         href={project.github}
                         className="group/link flex items-center space-x-2 text-amber-100/60 hover:text-amber-200 transition-all duration-300 text-sm font-light tracking-wide uppercase"
                       >
                         <Github className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
                         <span>Code</span>
-                      </a>
+                      </a> */}
                       <a
                         href={project.live}
                         className="group/link flex items-center space-x-2 text-amber-100/60 hover:text-rose-300 transition-all duration-300 text-sm font-light tracking-wide uppercase"
