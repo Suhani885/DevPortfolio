@@ -111,7 +111,10 @@ const About = ({ isVisible }) => {
             </div>
 
             <div className="text-center">
-              <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=suhaniss885@gmail.com&subject=Let's%20Work%20Together%20-%20New%20Project%20Inquiry&body=Hi%20Suhani,%0D%0A%0D%0AI%20hope%20this%20email%20finds%20you%20well.%0D%0A%0D%0AI%20have%20a%20project%20in%20mind%20and%20would%20appreciate%20the%20opportunity%20to%20discuss%20this%20further.%0D%0A%0AThank%20you%20for%20your%20time%20and%20I%20look%20forward%20to%20hearing%20from%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]">
+              <a
+                target="_blank"
+                href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=suhaniss885@gmail.com&subject=Let's%20Work%20Together%20-%20New%20Project%20Inquiry&body=Hi%20Suhani,%0D%0A%0D%0AI%20hope%20this%20email%20finds%20you%20well.%0D%0A%0D%0AI%20have%20a%20project%20in%20mind%20and%20would%20appreciate%20the%20opportunity%20to%20discuss%20this%20further.%0D%0A%0AThank%20you%20for%20your%20time%20and%20I%20look%20forward%20to%20hearing%20from%20you.%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]"
+              >
                 <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/10 to-rose-400/10 border border-amber-300/20 rounded-full text-amber-200/80 text-sm font-light tracking-wide backdrop-blur-sm">
                   <Award className="w-6 h-6 md:w-4 md:h-4" />
                   <span>Let's create something amazing together</span>

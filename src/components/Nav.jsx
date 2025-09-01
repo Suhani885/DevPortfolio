@@ -28,19 +28,24 @@ const Navigation = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-1">
-              {["Home", "About", "Projects", "Skills", "Contact"].map(
-                (item, index) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="relative px-4 py-2 text-sm font-light tracking-wide text-amber-100/80 hover:text-white transition-all duration-300 group uppercase rounded-md hover:bg-white/5"
-                    style={{ transitionDelay: `${index * 30}ms` }}
-                  >
-                    <span className="relative z-10">{item}</span>
-                    <span className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent transition-all duration-500 group-hover:w-3/4"></span>
-                  </a>
-                )
-              )}
+              {[
+                "Home",
+                "About",
+                "Experience",
+                "Projects",
+                "Skills",
+                "Contact",
+              ].map((item, index) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="relative px-4 py-2 text-sm font-light tracking-wide text-amber-100/80 hover:text-white transition-all duration-300 group uppercase rounded-md hover:bg-white/5"
+                  style={{ transitionDelay: `${index * 30}ms` }}
+                >
+                  <span className="relative z-10">{item}</span>
+                  <span className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent transition-all duration-500 group-hover:w-3/4"></span>
+                </a>
+              ))}
             </div>
 
             <button
@@ -89,19 +94,24 @@ const Navigation = () => {
         >
           <div className="p-6">
             <div className="space-y-4">
-              {["Home", "About", "Projects", "Skills", "Contact"].map(
-                (item, index) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="block py-3 px-4 text-base font-light tracking-wide text-amber-100/80 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 uppercase border-l-2 border-transparent hover:border-amber-300"
-                    onClick={() => setIsMenuOpen(false)}
-                    style={{ transitionDelay: `${index * 50}ms` }}
-                  >
-                    {item}
-                  </a>
-                )
-              )}
+              {[
+                "Home",
+                "About",
+                "Experience",
+                "Projects",
+                "Skills",
+                "Contact",
+              ].map((item, index) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="block py-3 px-4 text-base font-light tracking-wide text-amber-100/80 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 uppercase border-l-2 border-transparent hover:border-amber-300"
+                  onClick={() => setIsMenuOpen(false)}
+                  style={{ transitionDelay: `${index * 50}ms` }}
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </div>
         </div>

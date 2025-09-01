@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 import Navigation from "./components/Nav";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -43,6 +44,7 @@ const Portfolio = () => {
       <Navigation />
       <HeroSection isVisible={isVisible} />
       <About isVisible={isVisible} />
+      <Experience isVisible={isVisible} />
       <Projects isVisible={isVisible} />
       <Skills isVisible={isVisible} />
       <Contact isVisible={isVisible} />

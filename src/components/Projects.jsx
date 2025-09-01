@@ -116,7 +116,6 @@ const Projects = ({ isVisible }) => {
             </p>
           </div>
 
-          {/* Featured Projects */}
           <div className="mb-20">
             <div className="grid lg:grid-cols-2 gap-8">
               {featuredProjects.map((project, index) => (
@@ -135,19 +134,6 @@ const Projects = ({ isVisible }) => {
                   </div>
 
                   <div className="p-8">
-                    {/* <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-xs text-amber-200/60">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-3 h-3" />
-                          <span>{project.year}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Users className="w-3 h-3" />
-                          <span>{project.team}</span>
-                        </div>
-                      </div>
-                    </div> */}
-
                     <h3 className="text-2xl font-light mb-4 group-hover:text-amber-200 transition-colors tracking-wide text-amber-100">
                       {project.title}
                     </h3>
@@ -172,6 +158,7 @@ const Projects = ({ isVisible }) => {
                         <span>Code</span>
                       </a> */}
                       <a
+                        target="_blank"
                         href={project.live}
                         className="group/link flex items-center space-x-2 text-amber-100/60 hover:text-rose-300 transition-all duration-300 text-sm font-light tracking-wide uppercase"
                       >
@@ -253,7 +240,10 @@ const Projects = ({ isVisible }) => {
           </div> */}
 
           <div className="text-center mt-16">
-            <a href="https://github.com/Suhani885?tab=repositories">
+            <a
+              target="_blank"
+              href="https://github.com/Suhani885?tab=repositories"
+            >
               <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/10 to-rose-400/10 border border-amber-300/20 rounded-full text-amber-200/80 text-sm cursor-pointer font-light tracking-wide backdrop-blur-sm">
                 <Github className="w-4 h-4" />
                 <span>View all projects on GitHub</span>
