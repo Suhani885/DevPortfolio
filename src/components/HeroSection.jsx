@@ -1,4 +1,4 @@
-import { ChevronDown, Download, ArrowRight } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 
 const HeroSection = ({ isVisible }) => (
   <section
@@ -38,9 +38,9 @@ const HeroSection = ({ isVisible }) => (
             and modern web technologies through elegant design and clean code
           </p>
           <div className="flex justify-center space-x-6 text-sm text-amber-200/60 font-light">
-            <span>JavaScript</span>
-            <span>•</span>
             <span>React.js</span>
+            <span>•</span>
+            <span>Next.js</span>
             <span>•</span>
             <span>Angular.js</span>
           </div>

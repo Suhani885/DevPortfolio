@@ -1,6 +1,9 @@
-import { Github, ExternalLink, Calendar, Users } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 const Projects = ({ isVisible }) => {
+  const [activeTab, setActiveTab] = useState("projects");
+
   const projects = [
     {
       title: "Student Portal",
@@ -9,245 +12,238 @@ const Projects = ({ isVisible }) => {
       tech: [
         "React.js",
         "Material UI",
-        "Tailwind CSS",
+        "Tailwind",
         "Redux Toolkit",
         "ApexCharts",
       ],
-      image: "/studentPortal.jpeg",
-      github: "#",
+      image: "/projects/studentPortal.png",
       live: "https://tech.kiet.edu/StudentPortal/",
-      featured: true,
-      year: "2024",
-      team: "Team Project",
+      github: "#",
     },
-    // {
-    //   title: "E-Commerce Platform",
-    //   description:
-    //     "Modern e-commerce solution with React, TypeScript, and advanced state management. Features real-time inventory, payment integration, and admin dashboard with comprehensive analytics.",
-    //   tech: ["React", "TypeScript", "Tailwind", "Redux"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    //   github: "#",
-    //   live: "#",
-    //   featured: true,
-    //   year: "2025",
-    //   team: "Solo Project",
-    // },
+    {
+      title: "NotifyKIET",
+      description:
+        "Web app to create email templates and send bulk emails efficiently, serving as a notification portal for KIET Group of Institutions streamlining communication across the organization.",
+      tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
+      image: "/projects/notify.png",
+      live: "https://tech.kiet.edu/notify-kiet",
+      github: "#",
+    },
+    {
+      title: "KIET HRMS",
+      description:
+        "Used by KIET faculties and staff to manage organizational activities. Includes modules for payroll, leave requests, employee records, and performance monitoring, streamlining HR workflows.",
+      tech: ["Angular.js", "Bootstrap"],
+      image: "/projects/hrms.png",
+      live: "https://tech.kiet.edu/hrms",
+      github: "#",
+    },
+    {
+      title: "Manthan Quiz Platform",
+      description:
+        "The official quiz registration and management platform for Manthan 3.0, enabling participants to register, take quiz, and track results seamlessly.",
+      tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
+      image: "/projects/manthan.png",
+      live: "https://manthan.kiet.edu",
+      github: "#",
+    },
+    {
+      title: "Rann Website",
+      description:
+        "Official sports registration and management platform for Rann, streamlining participant sign-ups, and admin reports.",
+      tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
+      image: "/projects/rann.png",
+      live: "https://rann.kiet.edu",
+      github: "#",
+    },
     {
       title: "Hospital Management System",
       description:
-        "Comprehensive healthcare management platform with patient records, appointment scheduling, and real-time analytics. Features secure authentication and role-based access control.",
-      tech: ["Angular.js", "Bootstrap", "Django", "MySQL"],
-      image: "/hms.jpeg",
-      github: "https://github.com/Suhani885/HMS",
+        "A complete hospital workflow system with authentication, analytics, and role-based access, enabling smooth management of patients and staff.",
+      tech: ["Angular.js", "Bootstrap", "CanvasJS"],
+      image: "/projects/hms.jpeg",
       live: "https://www.suhanisingh.me",
-      featured: true,
-      year: "2024",
-      team: "Team of 2",
-    },
-    // {
-    //   title: "Certificate Generator",
-    //   description:
-    //     "Modern, responsive certificate generation tool with drag-and-drop field placement and real-time preview.",
-    //   tech: ["React.js", "TailwindCSS", "Django", "MySQL"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    //   github: "https://github.com/Suhani885/AutoCertify",
-    //   live: "#",
-    //   featured: true,
-    //   year: "",
-    //   team: "Team of 2",
-    // },
-    {
-      title: "Weather Dashboard",
-      description:
-        "Beautiful weather application with location-based forecasts, and detailed weather analytics with elegant UI design.",
-      tech: ["HTML", "CSS", "JavaScript", "Weather API"],
-      image: "/weather.jpeg",
-      github: "https://github.com/Suhani885/WeatherApp",
-      live: "https://weather-app-self-sigma-95.vercel.app/",
-      featured: false,
-      year: "",
-      team: "",
+      github: "https://github.com/Suhani885/HMS",
     },
     {
-      title: "Task Management App",
+      title: "P2P File Sharing",
       description:
-        "Collaborative task management application with real-time updates.",
-      tech: ["React", "Tailwind", "Redux", "Node", "Express", "MongoDB"],
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      github: "#",
-      live: "#",
-      featured: false,
-      year: "",
-      team: "",
+        "Secure peer-to-peer file sharing application with intuitive upload and download functionality, making file transfer fast and easy.",
+      tech: ["Tanstack", "Peer JS", "Tailwind", "Ant Design"],
+      image: "/projects/fileSharing.png",
+      live: "https://file-sharing-kohl.vercel.app/",
+      github: "https://github.com/Suhani885/file-sharing",
+    },
+    {
+      title: "Dynamic Charts",
+      description:
+        "Real-time cryptocurrency visualization platform to view live price movements and interactive charts powered by WebSocket streams.",
+      tech: ["Tanstack", "React ECharts", "Tailwind", "Ant Design"],
+      image: "/projects/charts.png",
+      live: "https://dynamic-charts.vercel.app/",
+      github: "https://github.com/Suhani885/dynamic-charts",
+    },
+    {
+      title: "Dynamic Table",
+      description:
+        "Interactive table web app that fetches data from any API URL. Columns are auto-detected and customizable for display preferences.",
+      tech: ["Tanstack", "Tailwind", "Ant Design"],
+      image: "/projects/table.png",
+      live: "https://dynamic-table-iota.vercel.app/",
+      github: "https://github.com/Suhani885/dynamic-table",
     },
   ];
 
-  const featuredProjects = projects.filter((project) => project.featured);
-  const otherProjects = projects.filter((project) => !project.featured);
+  const uiDesigns = [
+    {
+      title: "Space Weather Monitor",
+      description:
+        "A space-themed platform featuring interactive maps and atmospheric visuals. Designed with an immersive interface for an engaging user experience.",
+      tech: ["React", "Tailwind", "React Leaflet", "React ECharts"],
+      image: "/projects/spaceWeather.png",
+      live: "https://space-weather-three.vercel.app/",
+      github: "https://github.com/Suhani885/space-weather",
+    },
+    {
+      title: "Cirri Note",
+      description:
+        "A clean and minimal note-taking landing page built as a UI/UX concept to explore soft gradients, elegant layouts, and smooth micro-interactions.",
+      tech: ["React.js", "Tailwind"],
+      image: "/projects/cirriNote.png",
+      live: "https://cirri-note-bice.vercel.app/",
+      github: "https://github.com/Suhani885/cirri-note",
+    },
+    {
+      title: "TUF Landing Page",
+      description:
+        "A modern landing page inspired by the TUF brand, featuring bold visuals, a clean layout, and contemporary web aesthetics.",
+      tech: ["React.js", "Tailwind"],
+      image: "/projects/tuf.png",
+      live: "https://tuf-landing-page.vercel.app/",
+      github: "https://github.com/Suhani885/tuf-landing-page",
+    },
+  ];
+
+  const displayItems = activeTab === "projects" ? projects : uiDesigns;
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-amber-400/3 to-rose-400/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400/3 to-amber-400/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-amber-400/5 to-rose-400/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400/5 to-amber-400/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div
-          className={`transform transition-all duration-1500 delay-300 ${
+          className={`transform transition-all duration-1500 ${
             isVisible.projects
-              ? "translate-y-0 opacity-100"
-              : "translate-y-20 opacity-0"
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-20"
           }`}
         >
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-thin tracking-wider mb-6">
+            <h2 className="text-4xl md:text-6xl font-thin tracking-wider">
               <span className="bg-gradient-to-r from-amber-200 to-rose-200 bg-clip-text text-transparent">
-                PROJECTS
+                {activeTab === "projects" ? "PROJECTS" : "UI DESIGNS"}
               </span>
             </h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent mx-auto mb-4"></div>
-            <p className="text-amber-100/60 max-w-2xl mx-auto font-light">
-              A showcase of my recent work, featuring modern web applications
-              built with cutting-edge technologies
+            <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-amber-300 to-transparent mt-4"></div>
+            <p className="text-amber-100/60 mt-4 max-w-2xl mx-auto font-light">
+              {activeTab === "projects"
+                ? "Modern, polished applications built with a focus on performance and user-experience."
+                : "Creative interfaces showcasing contemporary design aesthetics and interactive experiences."}
             </p>
-          </div>
 
-          <div className="mb-20">
-            <div className="grid lg:grid-cols-2 gap-8">
-              {featuredProjects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 hover:border-amber-300/30 transition-all duration-700 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-300/10"
-                  style={{ transitionDelay: `${index * 150}ms` }}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                  </div>
+            <div className="flex justify-center mt-8 gap-4">
+              <button
+                onClick={() => setActiveTab("projects")}
+                className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full font-light tracking-wide backdrop-blur-sm transition-all duration-300 ${
+                  activeTab === "projects"
+                    ? "bg-gradient-to-r from-amber-400/20 to-rose-400/20 border border-amber-300/40 text-amber-200"
+                    : "bg-white/5 border border-white/10 text-amber-200/60 hover:border-amber-300/20"
+                }`}
+              >
+                <span>Projects</span>
+              </button>
 
-                  <div className="p-8">
-                    <h3 className="text-2xl font-light mb-4 group-hover:text-amber-200 transition-colors tracking-wide text-amber-100">
-                      {project.title}
-                    </h3>
-                    <p className="text-amber-100/70 mb-6 leading-relaxed font-light">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.tech.map((tech) => (
-                        <span className="px-3 py-1 bg-gradient-to-r from-amber-500/10 to-rose-500/10 text-amber-300/90 rounded-lg text-xs border border-amber-500/20 font-light tracking-wide hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-rose-500/20 transition-all duration-300">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex space-x-6">
-                      {/* <a
-                        href={project.github}
-                        className="group/link flex items-center space-x-2 text-amber-100/60 hover:text-amber-200 transition-all duration-300 text-sm font-light tracking-wide uppercase"
-                      >
-                        <Github className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
-                        <span>Code</span>
-                      </a> */}
-                      <a
-                        target="_blank"
-                        href={project.live}
-                        className="group/link flex items-center space-x-2 text-amber-100/60 hover:text-rose-300 transition-all duration-300 text-sm font-light tracking-wide uppercase"
-                      >
-                        <ExternalLink className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
-                        <span>Live Demo</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <button
+                onClick={() => setActiveTab("ui")}
+                className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full font-light tracking-wide backdrop-blur-sm transition-all duration-300 ${
+                  activeTab === "ui"
+                    ? "bg-gradient-to-r from-amber-400/20 to-rose-400/20 border border-amber-300/40 text-amber-200"
+                    : "bg-white/5 border border-white/10 text-amber-200/60 hover:border-amber-300/20"
+                }`}
+              >
+                <span>UI Designs</span>
+              </button>
             </div>
           </div>
 
-          {/* Other Projects */}
-          {/* <div>
-            <h3 className="text-2xl font-light text-center mb-12 text-amber-100">
-              <span className="bg-gradient-to-r from-amber-200/80 to-rose-200/80 bg-clip-text text-transparent">
-                More Projects
-              </span>
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {otherProjects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-amber-300/30 transition-all duration-500 hover:transform hover:scale-105 hover:bg-gradient-to-b hover:from-amber-500/5 hover:to-rose-500/5"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {displayItems.map((item, index) => (
+              <div
+                key={index}
+                className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-amber-300/30 transition-all duration-500 hover:-translate-y-1"
+              >
+                <div className="relative">
+                  <img
+                    src={item.image}
+                    className="w-full h-46 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
 
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="font-light group-hover:text-amber-200 transition-colors tracking-wide text-amber-100">
-                        {project.title}
-                      </h4>
-                      <span className="text-xs text-amber-200/60">
-                        {project.year}
+                <div className="p-6">
+                  <h3 className="text-xl font-light tracking-wide text-amber-100 group-hover:text-amber-200 transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-amber-100/70 mt-3 text-sm leading-relaxed font-light">
+                    {item.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 my-4">
+                    {item.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs rounded-lg bg-amber-500/10 text-amber-300 border border-amber-300/20"
+                      >
+                        {tech}
                       </span>
-                    </div>
+                    ))}
+                  </div>
 
-                    <p className="text-amber-100/70 mb-4 text-sm leading-relaxed font-light line-clamp-3">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.tech.map((tech) => (
-                        <span className="px-3 py-1 bg-gradient-to-r from-amber-500/10 to-rose-500/10 text-amber-300/90 rounded-lg text-xs border border-amber-500/20 font-light tracking-wide hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-rose-500/20 transition-all duration-300">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex space-x-4">
+                  <div className="flex items-center justify-start space-x-4 mt-3">
+                    {item.github !== "#" && (
                       <a
-                        href={project.github}
-                        className="flex items-center space-x-1 text-amber-100/60 hover:text-amber-200 transition-colors duration-300 text-xs font-light uppercase"
+                        href={item.github}
+                        target="_blank"
+                        className="flex items-center text-amber-200/70 text-sm hover:text-amber-200 transition-all"
                       >
-                        <Github className="w-3 h-3" />
-                        <span>Code</span>
+                        <Github className="w-4 h-4 mr-1" /> Code
                       </a>
-                      <a
-                        href={project.live}
-                        className="flex items-center space-x-1 text-amber-100/60 hover:text-rose-300 transition-colors duration-300 text-xs font-light uppercase"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                        <span>Demo</span>
-                      </a>
-                    </div>
+                    )}
+
+                    <a
+                      href={item.live}
+                      target="_blank"
+                      className="flex items-center text-rose-200/80 text-sm hover:text-rose-300 transition-all"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" /> Live
+                    </a>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div> */}
+              </div>
+            ))}
+          </div>
 
           <div className="text-center mt-16">
             <a
-              target="_blank"
               href="https://github.com/Suhani885?tab=repositories"
+              target="_blank"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/10 to-rose-400/10 border border-amber-300/20 rounded-full text-amber-200/80 font-light tracking-wide backdrop-blur-sm hover:border-amber-300/40 transition-all"
             >
-              <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/10 to-rose-400/10 border border-amber-300/20 rounded-full text-amber-200/80 text-sm cursor-pointer font-light tracking-wide backdrop-blur-sm">
-                <Github className="w-4 h-4" />
-                <span>View all projects on GitHub</span>
-              </div>
+              <Github className="w-4 h-4" />
+              <span>View all projects on GitHub</span>
             </a>
           </div>
         </div>

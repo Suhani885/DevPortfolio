@@ -18,7 +18,7 @@ const Experience = ({ isVisible }) => {
       technologies: [
         "React.js",
         "Next.js",
-        "AngularJS",
+        "Angular.js",
         "TypeScript",
         "Tailwind CSS",
         "Bootstrap",
