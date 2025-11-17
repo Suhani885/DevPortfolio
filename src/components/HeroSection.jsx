@@ -14,13 +14,7 @@ const HeroSection = ({ isVisible }) => (
     </div>
 
     <div className="text-center max-w-6xl mx-auto px-4 relative z-10">
-      <div
-        className={`transform transition-all duration-1500 ${
-          isVisible.home
-            ? "translate-y-0 opacity-100"
-            : "translate-y-20 opacity-0"
-        }`}
-      >
+      <div>
         <div className="mb-8">
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-thin mb-6 tracking-wider leading-tight">
             <span className="bg-gradient-to-r from-amber-200 via-rose-200 to-purple-200 bg-clip-text text-transparent animate-gradient">

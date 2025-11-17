@@ -33,13 +33,12 @@ const About = ({ isVisible }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
-          className={`transform transition-all duration-1500 delay-200 ${
+          className={`transform transition-all duration-1000 delay-100 ${
             isVisible.about
               ? "translate-y-0 opacity-100"
               : "translate-y-20 opacity-0"
           }`}
         >
-          {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-thin tracking-wider mb-6">
               <span className="bg-gradient-to-r from-amber-200 to-rose-200 bg-clip-text text-transparent">

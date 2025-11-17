@@ -96,6 +96,15 @@ const Projects = ({ isVisible }) => {
 
   const uiDesigns = [
     {
+      title: "Cirri Note",
+      description:
+        "A clean and minimal note-taking landing page built as a UI/UX concept to explore soft gradients, elegant layouts, and smooth micro-interactions.",
+      tech: ["React.js", "Tailwind"],
+      image: "/projects/cirriNote.png",
+      live: "https://cirri-note-bice.vercel.app/",
+      github: "https://github.com/Suhani885/cirri-note",
+    },
+    {
       title: "Space Weather Monitor",
       description:
         "A space-themed platform featuring interactive maps and atmospheric visuals. Designed with an immersive interface for an engaging user experience.",
@@ -105,13 +114,13 @@ const Projects = ({ isVisible }) => {
       github: "https://github.com/Suhani885/space-weather",
     },
     {
-      title: "Cirri Note",
+      title: "EduEase",
       description:
-        "A clean and minimal note-taking landing page built as a UI/UX concept to explore soft gradients, elegant layouts, and smooth micro-interactions.",
-      tech: ["React.js", "Tailwind"],
-      image: "/projects/cirriNote.png",
-      live: "https://cirri-note-bice.vercel.app/",
-      github: "https://github.com/Suhani885/cirri-note",
+        "UI design for AI-powered learning tools like interactive PDF chat, dynamic flashcards, and adaptive quizzes, emphasizing intuitive layout and smooth navigation.",
+      tech: ["Angular.js", "CSS", "Bootstrap"],
+      image: "/projects/eduease.png",
+      live: "https://eduease-psi.vercel.app/",
+      github: "https://github.com/Suhani885/EduEase",
     },
     {
       title: "TUF Landing Page",
@@ -135,7 +144,7 @@ const Projects = ({ isVisible }) => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div
-          className={`transform transition-all duration-1500 ${
+          className={`transform transition-all duration-1000 ${
             isVisible.projects
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-20"

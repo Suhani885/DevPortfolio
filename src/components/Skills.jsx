@@ -1577,7 +1577,7 @@ const Skills = ({ isVisible }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div
-          className={`transform transition-all duration-1500 delay-400 ${
+          className={`transform transition-all duration-1000 delay-100 ${
             isVisible?.skills
               ? "translate-y-0 opacity-100"
               : "translate-y-20 opacity-0"

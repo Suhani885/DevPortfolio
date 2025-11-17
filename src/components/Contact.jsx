@@ -4,7 +4,7 @@ const Contact = ({ isVisible }) => (
   <section id="contact" className="py-28 relative">
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
-        className={`transform transition-all duration-1500 delay-500 ${
+        className={`transform transition-all duration-1000 delay-100 ${
           isVisible.contact
             ? "translate-y-0 opacity-100"
             : "translate-y-20 opacity-0"
