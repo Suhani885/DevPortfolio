@@ -32,7 +32,7 @@ const Experience = ({ isVisible }) => {
       link: "https://jellybeanai.co/",
       description: [
         "Optimized user interfaces to improve usability and performance for a Gen AI web app targeting game developers.",
-        "Collaborated with the CTO and backend team to integrate frontend components with the platform’s core AI functionality.",
+        "Collaborated with the CTO and backend team to integrate frontend components with the platform's core AI functionality.",
         "Participated in product feature research and enhanced platform workflows to boost interactivity and responsiveness across devices.",
       ],
       technologies: ["React.js", "Material UI"],
@@ -44,8 +44,8 @@ const Experience = ({ isVisible }) => {
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-amber-400/3 to-rose-400/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400/3 to-amber-400/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-blue-300/40 via-blue-200/30 to-blue-300/40 dark:from-amber-400/3 dark:to-rose-400/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-200/40 via-blue-100/30 to-blue-200/40 dark:from-purple-400/3 dark:to-amber-400/3 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -58,18 +58,18 @@ const Experience = ({ isVisible }) => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-thin tracking-wider mb-6">
-              <span className="bg-gradient-to-r from-amber-200 to-rose-200 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500 dark:from-amber-200 dark:to-rose-200 bg-clip-text text-transparent">
                 EXPERIENCE
               </span>
             </h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent mx-auto"></div>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-rose-400 dark:via-amber-300 to-transparent mx-auto"></div>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-12 border border-white/10 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/50 to-transparent"></div>
-              <div className="absolute -top-1 -left-1 w-4 h-4 bg-gradient-to-br from-amber-300/30 to-rose-300/30 blur rounded-full"></div>
-              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-rose-300/20 to-purple-300/20 blur rounded-full"></div>
+            <div className="bg-gradient-to-br from-white/90 to-blue-50/70 dark:from-white/5 dark:to-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-12 border border-blue-300/70 dark:border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-400/50 dark:via-amber-300/50 to-transparent"></div>
+              <div className="absolute -top-1 -left-1 w-4 h-4 bg-gradient-to-br from-rose-400/30 to-amber-400/30 dark:from-amber-300/30 dark:to-rose-300/30 blur rounded-full"></div>
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-amber-400/20 to-rose-400/20 dark:from-rose-300/20 dark:to-purple-300/20 blur rounded-full"></div>
 
               <div className="flex flex-col lg:flex-row gap-8">
                 <div className="lg:w-80">
@@ -80,8 +80,8 @@ const Experience = ({ isVisible }) => {
                         onClick={() => setSelectedExperience(index)}
                         className={`flex-shrink-0 text-left px-6 py-4 rounded-xl border transition-all duration-700 whitespace-nowrap lg:whitespace-normal transform hover:scale-105 ${
                           selectedExperience === index
-                            ? "bg-gradient-to-r from-amber-500/20 to-rose-500/20 border-amber-300/40 text-amber-200"
-                            : "bg-white/5 border-white/10 text-amber-100/70 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-rose-500/10 hover:border-amber-300/20 hover:text-amber-200/90"
+                            ? "bg-gradient-to-r from-amber-400/40 to-rose-400/40 border-rose-400/60 text-gray-900 dark:from-amber-500/20 dark:to-rose-500/20 dark:border-amber-300/40 dark:text-amber-200"
+                            : "bg-white/80 border-blue-300/60 text-gray-700 hover:bg-gradient-to-r hover:from-amber-400/25 hover:to-rose-400/25 hover:border-rose-300/50 hover:text-gray-900 dark:bg-white/5 dark:border-white/10 dark:text-amber-100/70 dark:hover:from-amber-500/10 dark:hover:to-rose-500/10 dark:hover:border-amber-300/20 dark:hover:text-amber-200/90"
                         }`}
                       >
                         <div className="font-light text-sm tracking-wide">
@@ -106,18 +106,18 @@ const Experience = ({ isVisible }) => {
                         {selectedExperience === index && (
                           <>
                             <div className="mb-8">
-                              <h3 className="text-2xl md:text-3xl font-light text-amber-100 mb-2">
+                              <h3 className="text-2xl md:text-3xl font-light text-gray-900 dark:text-amber-100 mb-2">
                                 {exp.title}{" "}
                                 <a
                                   href={exp.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-transparent bg-gradient-to-r from-amber-300 to-rose-300 bg-clip-text hover:underline"
+                                  className="text-transparent bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500 dark:from-amber-300 dark:to-rose-300 bg-clip-text hover:underline"
                                 >
                                   @ {exp.company}
                                 </a>
                               </h3>
-                              <div className="text-amber-200/60 font-light text-sm tracking-wide mb-6">
+                              <div className="text-gray-600 dark:text-amber-200/60 font-light text-sm tracking-wide mb-6">
                                 {exp.duration}
                               </div>
                             </div>
@@ -126,11 +126,11 @@ const Experience = ({ isVisible }) => {
                               {exp.description.map((item, idx) => (
                                 <div
                                   key={idx}
-                                  className="flex items-start gap-3 text-amber-100/80 group/item"
+                                  className="flex items-start gap-3 text-gray-700 dark:text-amber-100/80 group/item"
                                 >
                                   <ChevronRight
                                     size={16}
-                                    className="text-amber-300 mt-1 flex-shrink-0 transform transition-all duration-300 group-hover/item:text-rose-300 group-hover/item:translate-x-1"
+                                    className="text-rose-400 dark:text-amber-300 mt-1 flex-shrink-0 transform transition-all duration-300 group-hover/item:text-amber-500 dark:group-hover/item:text-rose-300 group-hover/item:translate-x-1"
                                   />
                                   <span className="leading-relaxed font-light">
                                     {item}
@@ -143,7 +143,7 @@ const Experience = ({ isVisible }) => {
                               {exp.technologies.map((tech, idx) => (
                                 <span
                                   key={idx}
-                                  className="px-4 py-2 text-sm bg-white/10 text-amber-200 rounded-lg font-light tracking-wide border border-white/20 backdrop-blur-sm hover:bg-gradient-to-r hover:from-amber-400/20 hover:to-rose-400/20 hover:border-amber-300/40 transition-all duration-500 transform hover:scale-105"
+                                  className="px-4 py-2 text-sm bg-white/90 text-gray-800 dark:bg-white/10 dark:text-amber-200 rounded-lg font-light tracking-wide border border-blue-300/60 dark:border-white/20 backdrop-blur-sm hover:bg-gradient-to-r hover:from-amber-400/40 hover:to-rose-400/40 dark:hover:from-amber-400/20 dark:hover:to-rose-400/20 hover:border-rose-300/60 dark:hover:border-amber-300/40 transition-all duration-500 transform hover:scale-105"
                                   style={{ transitionDelay: `${idx * 50}ms` }}
                                 >
                                   {tech}

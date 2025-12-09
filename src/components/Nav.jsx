@@ -1,11 +1,20 @@
 import { useState } from "react";
+import { useTheme } from "../ThemeContext";
+import { Sun, Moon } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/20 border-b border-white/10">
+      <nav
+        className="fixed top-0 w-full z-50 backdrop-blur-xl 
+  bg-white/70 dark:bg-black/20 
+  border-b border-blue-200/40 dark:border-white/10 
+  shadow-sm dark:shadow-none
+  transition-all duration-300"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3 group">
@@ -20,7 +29,7 @@ const Navigation = () => {
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-300 to-rose-300 rounded-full opacity-0 group-hover:opacity-15 blur transition-all duration-500"></div>
               </div>
               <div className="relative">
-                <div className="text-lg sm:text-xl font-light tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-100 to-rose-200 hover:from-amber-200 hover:to-amber-300 transition-all duration-500">
+                <div className="text-lg sm:text-xl font-light tracking-wider text-transparent bg-clip-text bg-gradient-to-r  dark:from-amber-100 dark:to-rose-200 from-amber-600 to-rose-600 dark:hover:from-amber-200 dark:hover:to-amber-300 hover:from-amber-500 hover:to-rose-500 transition-all duration-500">
                   SUHANI SINGH
                 </div>
                 <div className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-amber-300 to-rose-300 transition-all duration-700 group-hover:w-full opacity-50"></div>
@@ -39,39 +48,95 @@ const Navigation = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="relative px-4 py-2 text-sm font-light tracking-wide text-amber-100/80 hover:text-white transition-all duration-300 group uppercase rounded-md hover:bg-white/5"
+                  className="relative px-4 py-2 text-sm font-light tracking-wide 
+text-gray-800 dark:text-amber-100/80 
+hover:text-gray-900 dark:hover:text-white 
+transition-all duration-300 group uppercase rounded-md 
+hover:bg-blue-50 dark:hover:bg-white/5"
                   style={{ transitionDelay: `${index * 30}ms` }}
                 >
                   <span className="relative z-10">{item}</span>
                   <span className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent transition-all duration-500 group-hover:w-3/4"></span>
                 </a>
               ))}
+
+              <button
+                onClick={toggleTheme}
+                className="ml-4 p-2 rounded-lg 
+bg-blue-50 dark:bg-white/5 
+border border-blue-200/50 dark:border-white/10  
+hover:bg-blue-100 dark:hover:bg-white/10 
+transition-all duration-200 group"
+                aria-label="Toggle theme"
+              >
+                <div className="relative w-5 h-5">
+                  <Sun
+                    className={`absolute inset-0 w-5 h-5 text-amber-400 transition-all duration-300 ${
+                      theme === "light"
+                        ? "rotate-0 opacity-100"
+                        : "rotate-90 opacity-0"
+                    }`}
+                  />
+                  <Moon
+                    className={`absolute inset-0 w-5 h-5 text-amber-200 transition-all duration-300 ${
+                      theme === "dark"
+                        ? "rotate-0 opacity-100"
+                        : "-rotate-90 opacity-0"
+                    }`}
+                  />
+                </div>
+              </button>
             </div>
 
-            <button
-              className="md:hidden relative w-8 h-8 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-amber-300/50"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              <div className="absolute inset-0 rounded-md bg-gradient-to-r from-amber-300/10 to-rose-300/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></div>
-              <div className="relative flex flex-col justify-center items-center space-y-1">
-                <span
-                  className={`w-4 h-0.5 bg-gradient-to-r from-amber-200 to-rose-200 rounded transition-all duration-300 ${
-                    isMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`w-4 h-0.5 bg-gradient-to-r from-rose-200 to-amber-200 rounded transition-all duration-300 ${
-                    isMenuOpen ? "opacity-0" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`w-4 h-0.5 bg-gradient-to-r from-amber-200 to-rose-200 rounded transition-all duration-300 ${
-                    isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                  }`}
-                ></span>
-              </div>
-            </button>
+            <div className="flex md:hidden items-center space-x-2">
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-md dark:bg-white/5 bg-gray-100 border  dark:border-white/10 border-gray-200  dark:hover:bg-white/10 hover:bg-gray-200 transition-all duration-200"
+                aria-label="Toggle theme"
+              >
+                <div className="relative w-5 h-5">
+                  <Sun
+                    className={`absolute inset-0 w-5 h-5 text-amber-400 transition-all duration-300 ${
+                      theme === "light"
+                        ? "rotate-0 opacity-100"
+                        : "rotate-90 opacity-0"
+                    }`}
+                  />
+                  <Moon
+                    className={`absolute inset-0 w-5 h-5 text-amber-200 transition-all duration-300 ${
+                      theme === "dark"
+                        ? "rotate-0 opacity-100"
+                        : "-rotate-90 opacity-0"
+                    }`}
+                  />
+                </div>
+              </button>
+
+              <button
+                className="relative w-8 h-8 rounded-md  dark:bg-white/5 bg-gray-100 border  dark:border-white/10 border-gray-200  dark:hover:bg-white/10 hover:bg-gray-200 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-amber-300/50"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                <div className="absolute inset-0 rounded-md bg-gradient-to-r from-amber-300/10 to-rose-300/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></div>
+                <div className="relative flex flex-col justify-center items-center space-y-1">
+                  <span
+                    className={`w-4 h-0.5 bg-gradient-to-r  dark:from-amber-200 dark:to-rose-200 from-amber-600 to-rose-600 rounded transition-all duration-300 ${
+                      isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`w-4 h-0.5 bg-gradient-to-r  dark:from-rose-200 dark:to-amber-200 from-rose-600 to-amber-600 rounded transition-all duration-300 ${
+                      isMenuOpen ? "opacity-0" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`w-4 h-0.5 bg-gradient-to-r  dark:from-amber-200 dark:to-rose-200 from-amber-600 to-rose-600 rounded transition-all duration-300 ${
+                      isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                    }`}
+                  ></span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -84,11 +149,15 @@ const Navigation = () => {
         }`}
       >
         <div
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-white/70 dark:bg-black/60 backdrop-blur-sm"
           onClick={() => setIsMenuOpen(false)}
         ></div>
         <div
-          className={`absolute top-20 right-4 w-64 bg-black/80 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl transform transition-all duration-300 ${
+          className={`absolute top-20 right-4 w-64  
+bg-white/95 dark:bg-black/80 
+backdrop-blur-2xl 
+border border-blue-200/40 dark:border-white/20 
+rounded-xl shadow-xl dark:shadow-2xl transform transition-all duration-300 ${
             isMenuOpen ? "translate-y-0 scale-100" : "-translate-y-4 scale-95"
           }`}
         >
@@ -105,7 +174,12 @@ const Navigation = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block py-3 px-4 text-base font-light tracking-wide text-amber-100/80 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 uppercase border-l-2 border-transparent hover:border-amber-300"
+                  className="block py-3 px-4 text-base font-light tracking-wide  
+text-gray-800 dark:text-amber-100/80 
+hover:text-gray-900 dark:hover:text-white  
+hover:bg-blue-50 dark:hover:bg-white/10 
+rounded-lg transition-all duration-200 uppercase 
+border-l-2 border-transparent hover:border-blue-400"
                   onClick={() => setIsMenuOpen(false)}
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >

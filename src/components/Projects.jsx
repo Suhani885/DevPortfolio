@@ -138,26 +138,26 @@ const Projects = ({ isVisible }) => {
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-amber-400/5 to-rose-400/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400/5 to-amber-400/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-blue-300/40 via-blue-200/30 to-blue-300/40 dark:from-amber-400/5 dark:to-rose-400/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-200/40 via-blue-100/30 to-blue-200/40 dark:from-purple-400/5 dark:to-amber-400/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div
           className={`transform transition-all duration-1000 ${
-            isVisible.projects
+            isVisible?.projects
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-20"
           }`}
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-thin tracking-wider">
-              <span className="bg-gradient-to-r from-amber-200 to-rose-200 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500 dark:from-amber-200 dark:to-rose-200 bg-clip-text text-transparent">
                 {activeTab === "projects" ? "PROJECTS" : "UI DESIGNS"}
               </span>
             </h2>
-            <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-amber-300 to-transparent mt-4"></div>
-            <p className="text-amber-100/60 mt-4 max-w-2xl mx-auto font-light">
+            <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-rose-400 dark:via-amber-300 to-transparent mt-4"></div>
+            <p className="text-gray-600 dark:text-amber-100/60 mt-4 max-w-2xl mx-auto font-light">
               {activeTab === "projects"
                 ? "Modern, polished applications built with a focus on performance and user-experience."
                 : "Creative interfaces showcasing contemporary design aesthetics and interactive experiences."}
@@ -168,8 +168,8 @@ const Projects = ({ isVisible }) => {
                 onClick={() => setActiveTab("projects")}
                 className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full font-light tracking-wide backdrop-blur-sm transition-all duration-300 ${
                   activeTab === "projects"
-                    ? "bg-gradient-to-r from-amber-400/20 to-rose-400/20 border border-amber-300/40 text-amber-200"
-                    : "bg-white/5 border border-white/10 text-amber-200/60 hover:border-amber-300/20"
+                    ? "bg-gradient-to-r from-amber-400/40 to-rose-400/40 border border-rose-400/60 text-gray-900 dark:from-amber-400/20 dark:to-rose-400/20 dark:border-amber-300/40 dark:text-amber-200"
+                    : "bg-white/80 border border-blue-300/60 text-gray-700 hover:border-rose-300/50 dark:bg-white/5 dark:border-white/10 dark:text-amber-200/60 dark:hover:border-amber-300/20"
                 }`}
               >
                 <span>Projects</span>
@@ -179,8 +179,8 @@ const Projects = ({ isVisible }) => {
                 onClick={() => setActiveTab("ui")}
                 className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full font-light tracking-wide backdrop-blur-sm transition-all duration-300 ${
                   activeTab === "ui"
-                    ? "bg-gradient-to-r from-amber-400/20 to-rose-400/20 border border-amber-300/40 text-amber-200"
-                    : "bg-white/5 border border-white/10 text-amber-200/60 hover:border-amber-300/20"
+                    ? "bg-gradient-to-r from-amber-400/40 to-rose-400/40 border border-rose-400/60 text-gray-900 dark:from-amber-400/20 dark:to-rose-400/20 dark:border-amber-300/40 dark:text-amber-200"
+                    : "bg-white/80 border border-blue-300/60 text-gray-700 hover:border-rose-300/50 dark:bg-white/5 dark:border-white/10 dark:text-amber-200/60 dark:hover:border-amber-300/20"
                 }`}
               >
                 <span>UI Designs</span>
@@ -192,7 +192,7 @@ const Projects = ({ isVisible }) => {
             {displayItems.map((item, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-amber-300/30 transition-all duration-500 hover:-translate-y-1"
+                className="group bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-blue-300/70 dark:border-white/10 rounded-2xl overflow-hidden hover:border-rose-400/60 dark:hover:border-amber-300/30 transition-all duration-500 hover:-translate-y-1"
               >
                 <div className="relative">
                   <img
@@ -202,11 +202,11 @@ const Projects = ({ isVisible }) => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-light tracking-wide text-amber-100 group-hover:text-amber-200 transition-colors">
+                  <h3 className="text-xl font-light tracking-wide text-gray-900 dark:text-amber-100 group-hover:text-rose-500 dark:group-hover:text-amber-200 transition-colors">
                     {item.title}
                   </h3>
 
-                  <p className="text-amber-100/70 mt-3 text-sm leading-relaxed font-light">
+                  <p className="text-gray-700 dark:text-amber-100/70 mt-3 text-sm leading-relaxed font-light">
                     {item.description}
                   </p>
 
@@ -214,7 +214,7 @@ const Projects = ({ isVisible }) => {
                     {item.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-xs rounded-lg bg-amber-500/10 text-amber-300 border border-amber-300/20"
+                        className="px-2 py-1 text-xs rounded-lg bg-amber-400/20 dark:bg-amber-500/10 text-gray-800 dark:text-amber-300 border border-rose-300/40 dark:border-amber-300/20"
                       >
                         {tech}
                       </span>
@@ -226,7 +226,7 @@ const Projects = ({ isVisible }) => {
                       <a
                         href={item.github}
                         target="_blank"
-                        className="flex items-center text-amber-200/70 text-sm hover:text-amber-200 transition-all"
+                        className="flex items-center text-gray-700 dark:text-amber-200/70 text-sm hover:text-amber-500 dark:hover:text-amber-200 transition-all"
                       >
                         <Github className="w-4 h-4 mr-1" /> Code
                       </a>
@@ -235,7 +235,7 @@ const Projects = ({ isVisible }) => {
                     <a
                       href={item.live}
                       target="_blank"
-                      className="flex items-center text-rose-200/80 text-sm hover:text-rose-300 transition-all"
+                      className="flex items-center text-rose-500 dark:text-rose-200/80 text-sm hover:text-rose-600 dark:hover:text-rose-300 transition-all"
                     >
                       <ExternalLink className="w-4 h-4 mr-1" /> Live
                     </a>
@@ -249,7 +249,7 @@ const Projects = ({ isVisible }) => {
             <a
               href="https://github.com/Suhani885?tab=repositories"
               target="_blank"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/10 to-rose-400/10 border border-amber-300/20 rounded-full text-amber-200/80 font-light tracking-wide backdrop-blur-sm hover:border-amber-300/40 transition-all"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-400/20 to-rose-400/20 dark:from-amber-400/10 dark:to-rose-400/10 border border-rose-400/40 dark:border-amber-300/20 rounded-full text-gray-700 dark:text-amber-200/80 font-light tracking-wide backdrop-blur-sm hover:border-rose-400/50 dark:hover:border-amber-300/40 transition-all"
             >
               <Github className="w-4 h-4" />
               <span>View all projects on GitHub</span>

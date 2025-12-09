@@ -30,7 +30,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-purple-400 to-pink-500",
     },
     {
       name: "CSS",
@@ -67,7 +66,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-purple-400 to-pink-500",
     },
     {
       name: "Javascript",
@@ -82,7 +80,6 @@ const Skills = ({ isVisible }) => {
           <path d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574" />
         </svg>
       ),
-      color: "from-gray-100 to-gray-400",
     },
     {
       name: "TypeScript",
@@ -101,7 +98,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-blue-400 to-indigo-600",
     },
     {
       name: "Python",
@@ -148,7 +144,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-purple-400 to-pink-500",
     },
     {
       name: "MongoDB",
@@ -257,7 +252,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-green-400 to-green-600",
     },
     {
       name: "Express.js",
@@ -274,7 +268,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-gray-100 to-gray-400",
     },
     {
       name: "React.js",
@@ -291,7 +284,6 @@ const Skills = ({ isVisible }) => {
           </g>
         </svg>
       ),
-      color: "from-cyan-400 to-blue-500",
     },
     {
       name: "Node.js",
@@ -367,7 +359,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-green-400 to-emerald-600",
     },
     {
       name: "Next.js",
@@ -415,7 +406,6 @@ const Skills = ({ isVisible }) => {
           </defs>
         </svg>
       ),
-      color: "from-teal-400 to-cyan-500",
     },
     {
       name: "Angular.js",
@@ -448,7 +438,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-purple-400 to-pink-500",
     },
     {
       name: "TailwindCSS",
@@ -465,7 +454,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-teal-400 to-cyan-500",
     },
     {
       name: "Bootstrap",
@@ -538,7 +526,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-purple-500 to-indigo-600",
     },
     {
       name: "Zustand",
@@ -1505,7 +1492,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-black to-gray-700",
     },
     {
       name: "MySQL",
@@ -1522,7 +1508,6 @@ const Skills = ({ isVisible }) => {
           />
         </svg>
       ),
-      color: "from-green-500 to-lime-600",
     },
   ];
 
@@ -1545,52 +1530,56 @@ const Skills = ({ isVisible }) => {
   }, []);
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden bg-black">
-      <div className="absolute inset-0 opacity-20">
+    <section id="skills" className="py-20 relative overflow-hidden ">
+      <div className="absolute inset-0 opacity-30 dark:opacity-20">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
-          `,
+              linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px)
+            `,
             backgroundSize: "50px 50px",
             animation: "grid-move 20s linear infinite",
           }}
         />
       </div>
 
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`,
-            }}
-          />
-        ))}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse
+          bg-gradient-to-r from-blue-300/30 via-blue-200/20 to-blue-300/30 
+          dark:from-amber-400/5 dark:via-rose-400/5 dark:to-purple-400/5"
+        />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl animate-pulse
+          bg-gradient-to-r from-blue-200/30 via-blue-100/20 to-blue-200/30
+          dark:from-purple-400/5 dark:via-amber-400/5 dark:to-rose-400/5"
+          style={{ animationDelay: "2s" }}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div
           className={`transform transition-all duration-1000 delay-100 ${
-            isVisible?.skills
-              ? "translate-y-0 opacity-100"
-              : "translate-y-20 opacity-0"
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
           }`}
           ref={containerRef}
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-thin tracking-wider mb-6">
-              <span className="bg-gradient-to-r from-amber-200 to-rose-200 bg-clip-text text-transparent">
+              <span
+                className="bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500
+                dark:from-amber-200 dark:via-rose-200 dark:to-purple-200
+                bg-clip-text text-transparent animate-gradient"
+              >
                 TECH STACK
               </span>
             </h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent mx-auto mb-4"></div>
+            <div
+              className="w-24 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent 
+              dark:via-amber-300 mx-auto mb-4"
+            />
           </div>
 
           <div className="perspective-1000">
@@ -1617,32 +1606,72 @@ const Skills = ({ isVisible }) => {
                 >
                   <div className="relative preserve-3d transition-transform duration-700 hover:rotate-y-180">
                     <div className="relative w-28 h-28 mx-auto backface-hidden">
-                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 p-[2px]">
-                        <div className="w-full h-full bg-gray-900/90 backdrop-blur-sm rounded-lg" />
-                      </div>
                       <div
-                        className={`absolute inset-0 rounded-lg bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`}
+                        className="absolute inset-0 rounded-lg 
+                        bg-gradient-to-r from-blue-400/40 via-purple-400/40 to-cyan-400/40 
+                        dark:from-blue-500/20 dark:via-purple-500/20 dark:to-cyan-500/20 
+                        p-[2px]"
+                      >
+                        <div
+                          className="w-full h-full bg-white/90 dark:bg-gray-900/90 
+                          backdrop-blur-sm rounded-lg"
+                        />
+                      </div>
+
+                      <div
+                        className="absolute inset-0 rounded-lg 
+                        opacity-0 group-hover:opacity-30 dark:group-hover:opacity-20 
+                        transition-opacity duration-500 blur-xl"
                       />
 
-                      <div className="relative w-full h-full flex flex-col items-center justify-center rounded-lg border border-gray-700/50 hover:border-gray-500/50 transition-all duration-500">
-                        <div className="text-6xl mb-2 transform group-hover:scale-110 transition-transform duration-500">
+                      <div
+                        className="relative w-full h-full flex flex-col items-center justify-center 
+                        rounded-lg border border-gray-300/50 dark:border-gray-700/50 
+                        hover:border-gray-400 dark:hover:border-gray-500/50 
+                        transition-all duration-500 bg-blue-50 dark:bg-transparent"
+                      >
+                        <div
+                          className="text-6xl mb-2 transform group-hover:scale-110 
+                          transition-transform duration-500 filter drop-shadow-lg"
+                        >
                           {tech.icon}
                         </div>
-                        <div className="text-xs font-mono text-gray-400 tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                          className="text-xs font-mono tracking-wider uppercase 
+                          opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                          text-gray-600 dark:text-gray-400"
+                        >
                           {tech.name}
                         </div>
                       </div>
 
-                      <div className="absolute inset-0 rounded-lg overflow-hidden">
-                        <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 animate-scan" />
+                      <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
+                        <div
+                          className="absolute w-full h-0.5 
+                          bg-gradient-to-r from-transparent via-blue-500 to-transparent 
+                          dark:via-blue-400 opacity-0 group-hover:opacity-100 animate-scan"
+                        />
                       </div>
                     </div>
 
-                    <div className="absolute inset-0 w-32 h-32 mx-auto backface-hidden rotate-y-180">
-                      <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black rounded-lg border border-blue-500/50 flex items-center justify-center">
+                    <div
+                      className="absolute inset-0 w-28 h-28 mx-auto 
+                      backface-hidden rotate-y-180"
+                    >
+                      <div
+                        className="w-full h-full bg-gradient-to-br 
+                        from-gray-100 to-white dark:from-gray-900 dark:to-black 
+                        rounded-lg border-2 border-blue-400/50 dark:border-blue-500/50 
+                        flex items-center justify-center shadow-xl"
+                      >
                         <div className="text-center">
-                          <div className="text-4xl mb-2">{tech.icon}</div>
-                          <div className="text-sm font-mono text-blue-400">
+                          <div className="text-4xl mb-2 filter drop-shadow-lg">
+                            {tech.icon}
+                          </div>
+                          <div
+                            className="text-sm font-mono 
+                            text-blue-600 dark:text-blue-400 font-medium"
+                          >
                             {tech.name}
                           </div>
                         </div>
@@ -1700,6 +1729,16 @@ const Skills = ({ isVisible }) => {
           }
         }
 
+        @keyframes gradient {
+          0%,
+          100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
         .perspective-1000 {
           perspective: 1000px;
         }
@@ -1711,6 +1750,10 @@ const Skills = ({ isVisible }) => {
         }
         .rotate-y-180 {
           transform: rotateY(180deg);
+        }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 3s ease infinite;
         }
       `}</style>
     </section>
