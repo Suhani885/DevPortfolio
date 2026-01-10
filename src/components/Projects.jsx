@@ -39,21 +39,21 @@ const Projects = ({ isVisible }) => {
       github: "#",
     },
     {
-      title: "Manthan Quiz Platform",
-      description:
-        "The official quiz registration and management platform for Manthan 3.0, enabling participants to register, take quiz, and track results seamlessly.",
-      tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
-      image: "/projects/manthan.png",
-      live: "https://manthan.kiet.edu",
-      github: "#",
-    },
-    {
       title: "Rann Website",
       description:
         "Official sports registration and management platform for Rann, streamlining participant sign-ups, and admin reports.",
       tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
       image: "/projects/rann.png",
       live: "https://rann.kiet.edu",
+      github: "#",
+    },
+    {
+      title: "KIET Website",
+      description:
+        "Designed and developed a new website for KIET with a focus on modern UI, clear information architecture, and improved user experience.",
+      tech: ["Next.js", "Sass", "Bootstrap", "Ant Design"],
+      image: "/projects/kiet.png",
+      live: "https://kiet.edu",
       github: "#",
     },
     {

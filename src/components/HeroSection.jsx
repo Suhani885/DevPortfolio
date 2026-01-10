@@ -81,7 +81,7 @@ const HeroSection = () => (
         </a>
 
         <a
-          href="/resume.pdf"
+          href="/Suhani's Resume.pdf"
           download="SuhaniSingh_Resume.pdf"
           className="
             group relative px-8 py-4 rounded-lg font-light uppercase text-sm overflow-hidden 
