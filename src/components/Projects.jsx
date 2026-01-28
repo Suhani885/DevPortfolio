@@ -39,7 +39,7 @@ const Projects = ({ isVisible }) => {
       github: "#",
     },
     {
-      title: "Rann Website",
+      title: "RANN Website",
       description:
         "Official sports registration and management platform for Rann, streamlining participant sign-ups, and admin reports.",
       tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
@@ -48,12 +48,12 @@ const Projects = ({ isVisible }) => {
       github: "#",
     },
     {
-      title: "KIET Website",
+      title: "KIET ePay",
       description:
-        "Designed and developed a new website for KIET with a focus on modern UI, clear information architecture, and improved user experience.",
-      tech: ["Next.js", "Sass", "Bootstrap", "Ant Design"],
-      image: "/projects/kiet.png",
-      live: "https://kiet.edu",
+        "Events payment platform for KIET, featuring a customizable form builder for event creation, with secure payment gateway integration.",
+      tech: ["Next.js", "Ant Design", "Payment Gateway"],
+      image: "/projects/epay.png",
+      live: "https://tech.kiet.edu/kiet-epay/",
       github: "#",
     },
     {
@@ -105,10 +105,19 @@ const Projects = ({ isVisible }) => {
       github: "https://github.com/Suhani885/cirri-note",
     },
     {
+      title: "KIET Website",
+      description:
+        "Designed and developed a new website for KIET with a focus on modern UI, clear information architecture, and improved user experience.",
+      tech: ["Next.js", "Sass", "Bootstrap", "Ant Design"],
+      image: "/projects/kiet.png",
+      live: "https://kiet.edu",
+      github: "#",
+    },
+    {
       title: "Space Weather Monitor",
       description:
         "A space-themed platform featuring interactive maps and atmospheric visuals. Designed with an immersive interface for an engaging user experience.",
-      tech: ["React", "Tailwind", "React Leaflet", "React ECharts"],
+      tech: ["React.js", "Tailwind", "React Leaflet", "React ECharts"],
       image: "/projects/spaceWeather.png",
       live: "https://space-weather-three.vercel.app/",
       github: "https://github.com/Suhani885/space-weather",
