@@ -1536,8 +1536,8 @@ const Skills = ({ isVisible }) => {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px)
+              linear-gradient(rgba(251, 146, 60, 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(251, 146, 60, 0.08) 1px, transparent 1px)
             `,
             backgroundSize: "50px 50px",
             animation: "grid-move 20s linear infinite",
@@ -1548,13 +1548,13 @@ const Skills = ({ isVisible }) => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse
-          bg-gradient-to-r from-blue-300/30 via-blue-200/20 to-blue-300/30 
-          dark:from-amber-400/5 dark:via-rose-400/5 dark:to-purple-400/5"
+          bg-gradient-to-r from-rose-200/40 via-amber-200/30 to-rose-200/40
+          dark:from-amber-400/20 dark:via-rose-400/20 dark:to-purple-400/20"
         />
         <div
           className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl animate-pulse
-          bg-gradient-to-r from-blue-200/30 via-blue-100/20 to-blue-200/30
-          dark:from-purple-400/5 dark:via-amber-400/5 dark:to-rose-400/5"
+          bg-gradient-to-r from-amber-200/40 via-orange-100/30 to-amber-200/40
+          dark:from-purple-400/20 dark:via-amber-400/20 dark:to-rose-400/20"
           style={{ animationDelay: "2s" }}
         />
       </div>
@@ -1608,7 +1608,7 @@ const Skills = ({ isVisible }) => {
                     <div className="relative w-28 h-28 mx-auto backface-hidden">
                       <div
                         className="absolute inset-0 rounded-lg 
-                        bg-gradient-to-r from-blue-400/40 via-purple-400/40 to-cyan-400/40 
+                        bg-gradient-to-r from-rose-300/50 via-amber-300/50 to-rose-300/50 
                         dark:from-blue-500/20 dark:via-purple-500/20 dark:to-cyan-500/20 
                         p-[2px]"
                       >
@@ -1626,9 +1626,9 @@ const Skills = ({ isVisible }) => {
 
                       <div
                         className="relative w-full h-full flex flex-col items-center justify-center 
-                        rounded-lg border border-gray-300/50 dark:border-gray-700/50 
-                        hover:border-gray-400 dark:hover:border-gray-500/50 
-                        transition-all duration-500 bg-blue-50 dark:bg-transparent"
+                        rounded-lg border border-rose-200/60 dark:border-gray-700/50 
+                        hover:border-rose-300 dark:hover:border-gray-500/50 
+                        transition-all duration-500 bg-gradient-to-br from-white to-rose-50/60 dark:bg-transparent dark:from-transparent dark:to-transparent"
                       >
                         <div
                           className="text-6xl mb-2 transform group-hover:scale-110 

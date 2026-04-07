@@ -163,8 +163,8 @@ const Projects = ({ isVisible }) => {
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-blue-300/40 via-blue-200/30 to-blue-300/40 dark:from-amber-400/5 dark:to-rose-400/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-200/40 via-blue-100/30 to-blue-200/40 dark:from-purple-400/5 dark:to-amber-400/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-rose-200/40 via-amber-200/30 to-rose-200/40 dark:from-amber-400/20 dark:to-rose-400/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-amber-200/40 via-orange-100/30 to-amber-200/40 dark:from-purple-400/20 dark:to-amber-400/20 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -217,7 +217,7 @@ const Projects = ({ isVisible }) => {
             {displayItems.map((item, index) => (
               <div
                 key={index}
-                className="group bg-white/90 dark:bg-white/5 backdrop-blur-xl border border-blue-300/70 dark:border-white/10 rounded-2xl overflow-hidden hover:border-rose-400/60 dark:hover:border-amber-300/30 transition-all duration-500 hover:-translate-y-1"
+                className="group bg-white dark:bg-white/5 backdrop-blur-xl border border-rose-200/60 dark:border-white/10 rounded-2xl overflow-hidden hover:border-rose-400/60 dark:hover:border-amber-300/30 transition-all duration-500 hover:-translate-y-1 shadow-md shadow-rose-100/40 dark:shadow-none hover:shadow-lg hover:shadow-rose-200/50 dark:hover:shadow-none"
               >
                 <div className="relative">
                   <img

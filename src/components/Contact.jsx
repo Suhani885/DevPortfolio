@@ -1,7 +1,13 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import TextPressure from "./TextPressure";
+import { useTheme } from "../ThemeContext";
 
-const Contact = ({ isVisible }) => (
-  <section id="contact" className="py-28 relative">
+const Contact = ({ isVisible }) => {
+  const { theme } = useTheme();
+  const textPressureColor = theme === "dark" ? "#f9d356ff" : "#fb2f5cff";
+
+  return (
+    <section id="contact" className="py-28 relative">
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
         className={`transform transition-all duration-1000 delay-100 ${
@@ -10,12 +16,18 @@ const Contact = ({ isVisible }) => (
             : "translate-y-20 opacity-0"
         }`}
       >
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-thin mb-6 tracking-wider">
-            <span className="bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500 dark:from-amber-200 dark:via-rose-200 dark:to-purple-200 bg-clip-text text-transparent">
-              LET'S CONNECT
-            </span>
-          </h2>
+        <div className="text-center mb-20 relative h-[80px] md:h-[120px] w-full">
+          <TextPressure
+            text="LET'S CONNECT"
+            flex={true}
+            alpha={false}
+            stroke={false}
+            width={true}
+            weight={true}
+            italic={true}
+            textColor={textPressureColor}
+            minFontSize={36}
+          />
         </div>
         <div className="bg-white/90 dark:bg-white/5 backdrop-blur-sm rounded-none p-12 border border-blue-300/70 dark:border-white/10 hover:border-rose-400/60 dark:hover:border-amber-300/30 transition-all duration-700 hover:bg-gradient-to-b hover:from-amber-400/20 hover:to-rose-400/20 dark:hover:from-amber-500/10 dark:hover:to-rose-500/10">
           <p className="text-center text-xl text-gray-700 dark:text-amber-100/80 mb-12 font-light tracking-wide leading-relaxed">
@@ -88,7 +100,8 @@ const Contact = ({ isVisible }) => (
         </div>
       </div>
     </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Contact;

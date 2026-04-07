@@ -44,8 +44,8 @@ const Experience = ({ isVisible }) => {
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-blue-300/40 via-blue-200/30 to-blue-300/40 dark:from-amber-400/3 dark:to-rose-400/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-200/40 via-blue-100/30 to-blue-200/40 dark:from-purple-400/3 dark:to-amber-400/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-gradient-to-r from-rose-200/40 via-amber-200/30 to-rose-200/40 dark:from-amber-400/20 dark:to-rose-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-amber-200/40 via-orange-100/30 to-amber-200/40 dark:from-purple-400/20 dark:to-amber-400/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -66,7 +66,7 @@ const Experience = ({ isVisible }) => {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-white/90 to-blue-50/70 dark:from-white/5 dark:to-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-12 border border-blue-300/70 dark:border-white/10 relative overflow-hidden group">
+            <div className="bg-gradient-to-br from-white to-amber-50/40 dark:from-white/5 dark:to-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-12 border border-rose-200/60 dark:border-white/10 relative overflow-hidden group shadow-lg shadow-rose-100/50 dark:shadow-none">
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-400/50 dark:via-amber-300/50 to-transparent"></div>
               <div className="absolute -top-1 -left-1 w-4 h-4 bg-gradient-to-br from-rose-400/30 to-amber-400/30 dark:from-amber-300/30 dark:to-rose-300/30 blur rounded-full"></div>
               <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-amber-400/20 to-rose-400/20 dark:from-rose-300/20 dark:to-purple-300/20 blur rounded-full"></div>

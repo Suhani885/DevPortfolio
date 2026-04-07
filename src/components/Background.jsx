@@ -1,7 +1,7 @@
 const Background = ({ mousePosition }) => (
   <div className="fixed inset-0">
     <div
-      className="absolute w-[800px] h-[600px] dark:opacity-40 opacity-25 blur-3xl"
+      className="absolute w-[800px] h-[600px] dark:opacity-60 opacity-25 blur-3xl"
       style={{
         background: `radial-gradient(ellipse at center, 
             rgba(255, 183, 77, 0.4) 0%,
@@ -15,7 +15,7 @@ const Background = ({ mousePosition }) => (
       }}
     />
     <div
-      className="absolute w-[600px] h-[400px] dark:opacity-30 opacity-20 blur-3xl"
+      className="absolute w-[600px] h-[400px] dark:opacity-50 opacity-20 blur-3xl"
       style={{
         background: `radial-gradient(ellipse at center,
             rgba(255, 206, 84, 0.3) 0%,
@@ -26,7 +26,7 @@ const Background = ({ mousePosition }) => (
         bottom: mousePosition.y / 12 + "px",
       }}
     />
-    <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-[#eef7ff] to-[#dcecff] dark:from-transparent dark:via-black/20 dark:to-black/40" />
+    <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-amber-50/60 to-orange-50/80 dark:from-black/60 dark:via-black/80 dark:to-black" />
   </div>
 );
 

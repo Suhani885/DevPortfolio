@@ -7,13 +7,13 @@ const HeroSection = () => (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       <div
         className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse
-        bg-gradient-to-r from-blue-300/40 via-blue-200/30 to-blue-300/40 
-        dark:from-amber-400/5 dark:via-rose-400/5 dark:to-purple-400/5"
+        bg-gradient-to-r from-rose-200/50 via-amber-200/40 to-orange-200/50
+        dark:from-amber-400/20 dark:via-rose-400/20 dark:to-purple-400/20"
       ></div>
       <div
         className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl animate-pulse
-        bg-gradient-to-r from-blue-200/40 via-blue-100/30 to-blue-200/40
-        dark:from-purple-400/5 dark:via-amber-400/5 dark:to-rose-400/5"
+        bg-gradient-to-r from-amber-200/50 via-rose-200/40 to-pink-200/50
+        dark:from-purple-400/20 dark:via-amber-400/20 dark:to-rose-400/20"
         style={{ animationDelay: "2s" }}
       ></div>
     </div>

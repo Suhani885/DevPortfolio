@@ -39,7 +39,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+    <div className="min-h-screen bg-white dark:bg-black text-white overflow-hidden relative">
       <Background mousePosition={mousePosition} />
       <Navigation />
       <HeroSection isVisible={isVisible} />
