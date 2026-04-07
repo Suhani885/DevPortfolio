@@ -30,21 +30,28 @@ const Projects = ({ isVisible }) => {
       github: "#",
     },
     {
+      title: "Epoque Website",
+      description:
+        "KIET's annual cultural fest registration and management platform, streamlining event sign-ups, participant coordination, payments, and admin reporting.",
+      tech: [
+        "React.js",
+        "Zod",
+        "React Hook Form",
+        "TanStack Query",
+        "Framer Motion",
+        "Payment Gateway",
+      ],
+      image: "/projects/epoque.png",
+      live: "https://epoque.kiet.edu",
+      github: "#",
+    },
+    {
       title: "KIET HRMS",
       description:
         "Used by KIET faculties and staff to manage organizational activities. Includes modules for payroll, leave requests, employee records, and performance monitoring, streamlining HR workflows.",
       tech: ["Angular.js", "Bootstrap"],
       image: "/projects/hrms.png",
       live: "https://tech.kiet.edu/hrms",
-      github: "#",
-    },
-    {
-      title: "RANN Website",
-      description:
-        "Official sports registration and management platform for Rann, streamlining participant sign-ups, and admin reports.",
-      tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
-      image: "/projects/rann.png",
-      live: "https://rann.kiet.edu",
       github: "#",
     },
     {
@@ -57,13 +64,13 @@ const Projects = ({ isVisible }) => {
       github: "#",
     },
     {
-      title: "Hospital Management System",
+      title: "RANN Website",
       description:
-        "A complete hospital workflow system with authentication, analytics, and role-based access, enabling smooth management of patients and staff.",
-      tech: ["Angular.js", "Bootstrap", "CanvasJS"],
-      image: "/projects/hms.jpeg",
-      live: "https://www.suhanisingh.me",
-      github: "https://github.com/Suhani885/HMS",
+        "Official sports registration and management platform for Rann, streamlining participant sign-ups, and admin reports.",
+      tech: ["Next.js", "Tailwind", "Ant Design", "Zustand"],
+      image: "/projects/rann.png",
+      live: "https://rann.kiet.edu",
+      github: "#",
     },
     {
       title: "P2P File Sharing",
@@ -75,14 +82,23 @@ const Projects = ({ isVisible }) => {
       github: "https://github.com/Suhani885/file-sharing",
     },
     {
-      title: "Dynamic Charts",
+      title: "Hospital Management System",
       description:
-        "Real-time cryptocurrency visualization platform to view live price movements and interactive charts powered by WebSocket streams.",
-      tech: ["Tanstack", "React ECharts", "Tailwind", "Ant Design"],
-      image: "/projects/charts.png",
-      live: "https://dynamic-charts.vercel.app/",
-      github: "https://github.com/Suhani885/dynamic-charts",
+        "A complete hospital workflow system with authentication, analytics, and role-based access, enabling smooth management of patients and staff.",
+      tech: ["Angular.js", "Bootstrap", "CanvasJS"],
+      image: "/projects/hms.jpeg",
+      live: "https://www.suhanisingh.me",
+      github: "https://github.com/Suhani885/HMS",
     },
+    // {
+    //   title: "Dynamic Charts",
+    //   description:
+    //     "Real-time cryptocurrency visualization platform to view live price movements and interactive charts powered by WebSocket streams.",
+    //   tech: ["Tanstack", "React ECharts", "Tailwind", "Ant Design"],
+    //   image: "/projects/charts.png",
+    //   live: "https://dynamic-charts.vercel.app/",
+    //   github: "https://github.com/Suhani885/dynamic-charts",
+    // },
     {
       title: "Dynamic Table",
       description:
