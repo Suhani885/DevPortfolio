@@ -8,6 +8,8 @@ import Navigation from "./components/Nav";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Preloader from "./components/Preloader";
+import Marquee from "./components/Marquee";
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -39,10 +41,12 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-white overflow-hidden relative">
+    <div className="min-h-screen bg-transparent dark:bg-black text-gray-900 dark:text-white overflow-hidden relative">
+      <Preloader />
       <Background mousePosition={mousePosition} />
       <Navigation />
       <HeroSection isVisible={isVisible} />
+      <Marquee text="AVAILABLE FOR WORK • CREATIVE DEVELOPER • FRONTEND ENGINEER " />
       <About isVisible={isVisible} />
       <Experience isVisible={isVisible} />
       <Projects isVisible={isVisible} />
